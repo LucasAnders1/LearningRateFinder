@@ -31,6 +31,7 @@ class LRFinder(Callback):
         self.lr_step_size = lr_step_size
         self.losses = []
         self.lrs = []
+        self.lr = 0
 
     def on_batch_end(self, batch, logs={}):
         iterations = logs.get('batch')
